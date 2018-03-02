@@ -7,7 +7,7 @@ import { PriceDisplayComponent } from './price-display/price-display.component';
 import { ProductDepartmentComponent } from './product-department/product-department.component';
 import { ProductImageComponent } from './product-image/product-image.component';
 import { ProductRowComponent } from './product-row/product-row.component';
-import { ProductsListComponentComponent } from './products-list-component/products-list-component.component';
+import { ProductsListComponent } from './products-list/products-list.component';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import { ProductsListComponentComponent } from './products-list-component/produc
     ProductDepartmentComponent,
     ProductImageComponent,
     ProductRowComponent,
-    ProductsListComponentComponent
+    ProductsListComponent
   ],
   imports: [
     BrowserModule

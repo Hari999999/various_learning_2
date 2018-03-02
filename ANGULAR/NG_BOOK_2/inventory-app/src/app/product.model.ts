@@ -1,6 +1,6 @@
 /**
-* Provides a `Product` object
-*/
+ * Provides a `Product` object
+ */
 export class Product {
   constructor(
     public sku: string,

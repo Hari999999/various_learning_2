@@ -1,5 +1,6 @@
 package com.echessa.geoquiz;
 
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 public class QuizActivity extends AppCompatActivity {
 
     private static final String TAG = "QuizActivity";
+    private static final String KEY_INDEX = "index";
 
     private Button mTrueButton;
     private Button mFalseButton;
@@ -33,6 +35,10 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate(Bundle) called");
         setContentView(R.layout.activity_quiz);
+
+        if (savedInstanceState != null) {
+            mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
+        }
 
         mQuestionTextView = findViewById(R.id.question_text_view);
         int question = mQuestionBank[mCurrentIndex].getTextResId();
@@ -65,28 +71,38 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onStart() {
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i(TAG, "onSaveInstanceState");
+        outState.putInt(KEY_INDEX, mCurrentIndex);
+    }
+
+    @Override
+    protected void onStart() {
         super.onStart();
         Log.d(TAG, "onStart() called");
     }
+
     @Override
-    public void onResume() {
+    protected void onResume() {
         super.onResume();
         Log.d(TAG, "onResume() called");
     }
+
     @Override
-    public void onPause() {
+    protected void onPause() {
         super.onPause();
         Log.d(TAG, "onPause() called");
     }
+
     @Override
-    public void onStop() {
+    protected void onStop() {
         super.onStop();
         Log.d(TAG, "onStop() called");
     }
 
     @Override
-    public void onDestroy() {
+    protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy() called");
     }

@@ -3,4 +3,5 @@
 
     <string name="send">Send Message</string>
     <string name="hint">Enter a message</string>
+    <string name="chooser">Send message via…</string>
 </resources>

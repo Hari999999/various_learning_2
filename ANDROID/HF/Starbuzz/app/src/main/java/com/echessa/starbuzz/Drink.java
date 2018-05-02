@@ -29,7 +29,7 @@ public class Drink {
     public int getImageResourceId() {
         return imageResourceId;
     }
-    
+
     public String toString() {
         return this.name;
     }

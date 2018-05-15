@@ -2,4 +2,6 @@
     <string name="app_name">Workout</string>
 
     <string name="details_button">Show details</string>
+    <string name="workout_title">Title</string>
+    <string name="workout_description">Description</string>
 </resources>

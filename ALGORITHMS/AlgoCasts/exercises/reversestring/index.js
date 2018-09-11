@@ -8,6 +8,15 @@
 
 function reverse(str) {
   return str.split('').reverse().join('');
+
+  // const characters = str.split('');
+  // let reversed = '';
+
+  // for (character of characters) {
+  //   reversed = character + reversed;
+  // }
+
+  // return reversed;
 }
 
 module.exports = reverse;
